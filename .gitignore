@@ -9,3 +9,5 @@ out
 gen
 将删除 .gitignore
 将删除 .idea/
+将删除 db.sqlite3
+将删除 manage.py

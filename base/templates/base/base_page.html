@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
     <title>{% block title %}Ceph web mgr{% endblock title %}</title>
 
 
@@ -16,7 +17,8 @@
     <link href="{% static 'base/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{% static 'base/vendors/nprogress/nprogress.css' %}" rel="stylesheet">
-
+    {% block extra_css %}
+    {% endblock extra_css %}
     <!-- Custom Theme Style -->
     <link href="{% static 'base/build/css/custom.min.css' %}" rel="stylesheet">
   </head>
@@ -143,8 +145,7 @@
                         <li><a href="#level1_2">Level One</a>
                         </li>
                     </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                  </li>
                 </ul>
               </div>
 
@@ -268,6 +269,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
+        {% block page_cont %}
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
@@ -312,7 +314,9 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                      {% block page_content %}
                       Add content to the page ...
+                      {% endblock page_content %}
                   </div>
                 </div>
               </div>
@@ -320,6 +324,7 @@
           </div>
         </div>
         <!-- /page content -->
+        {% endblock page_cont %}
 
         <!-- footer content -->
         <footer>
@@ -340,8 +345,10 @@
     <script src="{% static 'base/vendors/fastclick/lib/fastclick.js' %}"></script>
     <!-- NProgress -->
     <script src="{% static 'base/vendors/nprogress/nprogress.js' %}"></script>
-    
+    {% block extra_js %}
+    {% endblock extra_js %}
     <!-- Custom Theme Scripts -->
     <script src="{% static 'base/build/js/custom.min.js' %}"></script>
+
   </body>
 </html>

@@ -1,6 +1,11 @@
 # ceph-web-mgr
 打造一个自己适用的ceph web管理平台。
 
+### 期望目标
+- 跨常见linux发行版
+- 在命令行操作的时候，web同样有所反映
+- 易上手
+- 无任何单点故障，或可以方便组建高可用
 ### 开发环境：
 - CentOS Linux release 7.3.1611
 - python 3.4.5
